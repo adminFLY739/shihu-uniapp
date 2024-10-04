@@ -1,0 +1,450 @@
+{
+
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [{
+			"path": "pages/tabbar/home/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/tabbar/screen/fullScreen",
+			"style": {
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"app-plus": {
+					"animationType": "fade-in", // 设置fade-in淡入动画，为最合理的动画类型
+					"background": "transparent", // 背景透明
+					"backgroundColor": "rgba(0,0,0,0)", // 背景透明
+					"popGesture": "none" // 关闭IOS屏幕左边滑动关闭当前页面的功能
+				}
+			}
+		},
+		{
+			"path": "pages/tabbar/home/title",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/tabbar/user/my",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},
+
+		{
+			"path": "pages/tabbar/home/web-view",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar/bbsIndex/index",
+			"style": {
+				"navigationBarTitleText": "主页",
+				"backgroundColor": "#fff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/tabbar/follow/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+
+		}
+	],
+	"subPackages": [
+
+		{
+			"root": "pages/mine",
+			"pages": [{
+					"path": "realNameAuth/realNameAuth",
+					"style": {
+						"navigationBarTitleText": "实名认证",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "set/versionFunctionList",
+					"style": {
+						"navigationBarTitleText": "功能介绍"
+					}
+				},
+				{
+					"path": "set/securityCenter/fingerLogin",
+					"style": {
+						"navigationBarTitleText": "指纹登录"
+					}
+				},
+				{
+					"path": "set/securityCenter/faceLogin",
+					"style": {
+						"navigationBarTitleText": "面容登录"
+					}
+				},
+				{
+					"path": "set/securityCenter/editPassword",
+					"style": {
+						"navigationBarTitleText": "修改密码",
+						"app-plus": {
+
+						}
+					}
+				},
+				{
+					"path": "set/securityCenter/forgetPassword",
+					"style": {
+						"navigationBarTitleText": "忘记密码",
+						"app-plus": {
+
+						}
+					}
+				},
+				{
+					"path": "message/list",
+					"style": {
+						"navigationBarTitleText": "消息",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "message/comment",
+					"style": {
+						"navigationBarTitleText": "评论转发",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "message/endorse",
+					"style": {
+						"navigationBarTitleText": "赞同喜欢",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "message/collect",
+					"style": {
+						"navigationBarTitleText": "收藏了我",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "message/follow",
+					"style": {
+						"navigationBarTitleText": "新增关注",
+						"enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "message/inviteReply",
+					"style": {
+						"navigationBarTitleText": "邀请回答",
+						"enablePullDownRefresh": true
+					}
+				},
+
+				{
+					"path": "set/feedBack",
+					"style": {
+						"navigationBarTitleText": "意见反馈"
+					}
+				},
+				{
+					"path": "set/securityCenter/securityCenter",
+					"style": {
+						"navigationBarTitleText": "安全中心"
+					}
+				},
+
+				{
+					"path": "set/editionIntro",
+					"style": {
+						"navigationBarTitleText": "关于我们"
+					}
+				},
+				{
+					"path": "set/setUp",
+					"style": {
+						"navigationBarTitleText": "设置"
+					}
+				},
+				{
+					"path": "set/personMsg",
+					"style": {
+						"navigationBarTitleText": "个人信息",
+						"app-plus": {
+							"titleNView": {
+								"padding-right": "12",
+								"buttons": [{
+									"text": "保存",
+									"fontSize": "16",
+									"width": "auto",
+									"color": "#FFFFFF"
+								}]
+							}
+						}
+					}
+				}, {
+					"path": "help/tips",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "msgTips/main",
+					"style": {
+						"navigationBarTitleText": "消息中心"
+					}
+				},
+				{
+					"path": "msgTips/sysMsg/index",
+					"style": {
+						"navigationBarTitleText": "系统消息"
+					}
+				},
+				{
+					"path": "msgTips/serviceMsg/index",
+					"style": {
+						"navigationBarTitleText": "客服记录"
+					}
+				}
+			]
+
+		},
+		{
+			"root": "pages/floor",
+			"pages": [{
+				"path": "empty"
+			}]
+
+		},
+		{
+			"root": "pages/passport",
+			"pages": [{
+					"path": "login",
+					"style": {
+						"navigationBarTitleText": "",
+						"navigationStyle": "custom",
+						"app-plus": {
+							"titleNView": false,
+							"animationType": "slide-in-bottom",
+							"scrollIndicator": "none",
+							"safearea": {
+								"bottom": {
+									"offset": "none"
+								}
+							}
+						}
+					}
+				},
+				{
+					"path": "register",
+					"style": {
+						"navigationBarTitleText": "",
+						"navigationStyle": "custom",
+						"app-plus": {
+							"titleNView": false,
+							"animationType": "slide-in-bottom",
+							"scrollIndicator": "none",
+							"safearea": {
+								"bottom": {
+									"offset": "none"
+								}
+							}
+						}
+					}
+				},
+				{
+					"path": "article",
+					"style": {
+						"navigationBarTitleText": "文章"
+					}
+				},
+				{
+					"path": "wechatMPLogin",
+					"style": {
+						"navigationBarTitleText": "小程序登录",
+						"navigationStyle": "custom",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "scannerCodeLoginConfirm",
+					"style": {
+						"navigationBarTitleText": "扫码登录",
+						"navigationStyle": "custom",
+						"navigationBarTextStyle": "black"
+					}
+				}
+
+			]
+
+		},
+		{
+			"root": "pages/BBS",
+			"pages": [{
+					"path": "user/user",
+					"style": {
+						"navigationBarTitleText": "我的"
+					}
+				}, {
+					"path": "post/post",
+					"style": {
+						"navigationBarTitleText": "详情",
+						"enablePullDownRefresh": false
+					}
+
+				}, {
+					"path": "my/post",
+					"style": {
+						"navigationBarTitleText": "帖子",
+						"enablePullDownRefresh": false
+					}
+
+				}, {
+					"path": "my/user",
+					"style": {
+						"navigationBarTitleText": "用户",
+						"enablePullDownRefresh": false
+					}
+
+				}, {
+					"path": "post/add",
+					"style": {
+						"navigationBarTitleText": "发布帖子",
+						"enablePullDownRefresh": false
+					}
+
+				}, {
+					"path": "user/edit",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
+
+				}, {
+					"path": "user/home",
+					"style": {
+						"navigationBarTitleText": "个人主页",
+						"navigationStyle": "custom",
+						"navigationBarTextStyle": "white"
+					}
+
+				},
+				{
+					"path": "square/square",
+					"style": {
+
+						"enablePullDownRefresh": true,
+						"navigationStyle": "custom"
+					}
+				}
+
+				, {
+					"path": "post/category",
+					"style": {
+						"navigationBarTitleText": "选择分类",
+						"enablePullDownRefresh": false
+					}
+
+				}
+
+				, {
+					"path": "discuss/discuss",
+					"style": {
+						"navigationBarTitleText": "详情",
+						"enablePullDownRefresh": false
+					}
+
+				}, {
+					"path": "discuss/add",
+					"style": {
+						"navigationBarTitleText": "发表话题",
+						"enablePullDownRefresh": false
+					}
+
+				}, {
+					"path": "discuss/reply",
+					"style": {
+						"navigationBarTitleText": "发表回答",
+						"enablePullDownRefresh": false
+					}
+				}, {
+					"path": "discuss/invite",
+					"style": {
+						"navigationBarTitleText": "邀请回答",
+						"enablePullDownRefresh": false
+					}
+				}
+
+			]
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "杭师二手",
+		"titleColor": "#303133",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff",
+		"color": "#FFFFFF",
+		"app-plus": {
+			// 全局关闭回弹功能
+			"bounce": "none"
+
+		}
+	},
+	"tabBar": {
+		"custom": true, 
+		"color": "#666",
+		"selectedColor": "#ff573e",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/tabbar/home/index",
+				"iconPath": "static/tabbar/1.png",
+				"selectedIconPath": "static/tabbar/11.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabbar/follow/index",
+				"iconPath": "static/tabbar/2.png",
+				"selectedIconPath": "static/tabbar/22.png",
+				"text": "关注"
+			},
+			{
+				"pagePath": "pages/tabbar/bbsIndex/index",
+				"iconPath": "static/tabbar/4.png",
+				"selectedIconPath": "static/tabbar/4.png",
+				"text": "论坛"
+			},
+			{
+				"pagePath": "pages/tabbar/user/my",
+				"iconPath": "static/tabbar/5.png",
+				"selectedIconPath": "static/tabbar/5.png",
+				"text": "我的"
+			}
+		]
+	},
+	// #todo 为什么要注释condition下代码？
+	// IOS plus.runtime.arguments 添加 condition节点后， 框架会修改 runtime.arguments
+	// 会影响什么功能？
+	//    -在h5中唤醒app会一直返回默认值 {"name":"","path":"","query":"","id":0}
+	"condition": { //模式配置，仅开发期间生效
+		// "current": 0, //当前激活的模式(list 的索引项)
+		// "list": [{
+		// 	"name": "", //模式名称
+		// 	"path":"", //启动页面，必选
+		// 	"query": "" //启动参数，在页面的onLoad函数里面得到
+		// }]
+	}
+}
