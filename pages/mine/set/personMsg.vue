@@ -136,6 +136,7 @@
 						uni.navigateBack();
 					}
 				});
+				console.log("form", params);
 			},
 
 			// 修改头像（新）

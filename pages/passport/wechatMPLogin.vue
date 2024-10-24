@@ -96,15 +96,14 @@
 					url: `/pages/tabbar/home/index`,
 				});
 			},
-
-
 			//获取用户信息
 			async getUserProfile(e) {
 				let that = this;
 				//获取code
 				await uni.login({
+					provider: 'weixin',
 					success: (res) => {
-						console.log("uni.login返回的信息：",res);
+						console.log("uni.login:",res);
 						that.code = res.code;
 						//获取小程序id
 						const accountInfo = wx.getAccountInfoSync();
@@ -112,24 +111,61 @@
 							code: this.code,
 							appid: accountInfo.miniProgram.appId,
 						}).then((apiRes) => {
-							storage.setAccessToken(apiRes.data.result.accessToken);
-							storage.setRefreshToken(apiRes.data.result.refreshToken);
-							// uni.showToast({
-							// 	title: "登录成功!",
-							// 	icon: "none",
-							// });
-							getUserInfo().then((user) => {
-								console.log(2)
-								storage.setUserInfo(user.data.result);
-								storage.setHasLogin(true);
-				
-								uni.navigateBack({
-									delta: 1,
+							console.log("newAutoLogin:", apiRes);
+							if (apiRes.data && apiRes.data.result) {
+								storage.setAccessToken(apiRes.data.result.accessToken);
+								storage.setRefreshToken(apiRes.data.result.refreshToken);
+								// 获取用户信息
+								getUserInfo().then((user) => {
+									console.log("用户:", user);
+									storage.setUserInfo(user.data.result);
+									storage.setHasLogin(true);
+									uni.navigateBack({ delta: 1 });
+								}).catch((error) => {
+									console.error("用户失败:", error);
 								});
-							});
+							} else {
+								console.error("newAutoLogin失败:", apiRes);
+							}
+						}).catch((error) => {
+							console.error("newAutoLogin 请求出错:", error);
 						});
 					},
 				});
+
+
+			// //获取用户信息
+			// async getUserProfile(e) {
+			// 	let that = this;
+			// 	//获取code
+			// 	await uni.login({
+			// 		success: (res) => {
+			// 			console.log("uni.login返回的信息：",res);
+			// 			that.code = res.code;
+			// 			//获取小程序id
+			// 			const accountInfo = wx.getAccountInfoSync();
+			// 			newAutoLogin({
+			// 				code: this.code,
+			// 				appid: accountInfo.miniProgram.appId,
+			// 			}).then((apiRes) => {
+			// 				storage.setAccessToken(apiRes.data.result.accessToken);
+			// 				storage.setRefreshToken(apiRes.data.result.refreshToken);
+			// 				// uni.showToast({
+			// 				// 	title: "登录成功!",
+			// 				// 	icon: "none",
+			// 				// });
+			// 				getUserInfo().then((user) => {
+			// 					console.log(2)
+			// 					storage.setUserInfo(user.data.result);
+			// 					storage.setHasLogin(true);
+				
+			// 					uni.navigateBack({
+			// 						delta: 1,
+			// 					});
+			// 				});
+			// 			});
+			// 		},
+			// 	});
 				
 				
 				// 当前时间2023/11/19(该接口已被微信作废，无法获取用户信息了)

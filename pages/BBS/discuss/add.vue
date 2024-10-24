@@ -87,7 +87,7 @@
 					return;
 				}
 
-				if (!this.form.cut) {
+				if (this.form.cut.length === 0) {
 					this.$u.toast('分类不能为空');
 					return;
 				}

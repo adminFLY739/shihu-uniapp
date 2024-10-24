@@ -2,6 +2,8 @@
   <div class="feedBack">
     <div class="feedBack-box">
       <h4>猜你想问</h4>
+      <hr>
+      <h5>此投诉为本小程序自有投诉渠道，非微信官方投诉渠道</h5>
       <div class="feedBack-item" :class="{'active':feedBack.type == item.value }" @click="handleClick(index)" v-for="(item,index) in list" :key="index">
         {{item.text}}
       </div>
