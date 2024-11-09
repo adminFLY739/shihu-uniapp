@@ -185,6 +185,7 @@
 									title: '发布中'
 								});
 								addPost(vm.form).then((res) => {
+                  console.log("zc", JSON.parse(JSON.stringify(vm.form)))
 									if (res.data.code === 0) {
 										uni.redirectTo({
 											url: '/pages/BBS/post/post?id=' + res.data.result

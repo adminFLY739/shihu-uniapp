@@ -111,9 +111,10 @@
 				addFollow(followForm).then((res) => {
 					if (res.data.code === 0) {
 						this.userInfo.isFollow = true;
-					} else {
-						this.$u.toast(res.data.msg);
 					}
+          // else {
+					// 	this.$u.toast(res.data.msg);
+					// }
 				});
 			},
 			cancelFollow() {

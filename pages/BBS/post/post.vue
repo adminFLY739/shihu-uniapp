@@ -278,7 +278,7 @@
 					:confirm-type="send" @confirm="addComment">
 				</textarea>
 				<view class="emoji">
-					<text class="emojiIcon" style="font-size: 16px;" @tap="showEmj">😃</text>
+					<text class="emojiIcon" style="font-size: 16px;" @tap="showEmj">🤓</text>
 				</view>
 				<view class="sunbmit">
 					<u-button @click="addComment" :disabled="canSunbmit" :custom-style="btnStyle"
@@ -665,6 +665,7 @@
 				});
 				this.isShowEmj = false;
 				addComment(this.form).then((res) => {
+          console.log("commentListcommentListcommentList", JSON.stringify(this.form));
 					if (res.data.code == 0) {
 						this.form.content = '';
 						this.$u.toast('评论成功');

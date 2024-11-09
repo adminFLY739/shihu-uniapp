@@ -5,8 +5,8 @@
 // 开发环境
 const dev = {
 	// im: "http://127.0.0.1:8885",
-	// common: "http://127.0.0.1:8890",
-	// buyer: "http://127.0.0.1:8888",
+	common: "http://127.0.0.1:8890",
+	buyer: "http://127.0.0.1:8888",
 	// seller: "http://127.0.0.1:8889",
 	
 	// im: "http://121.43.34.227:8885",
@@ -14,8 +14,8 @@ const dev = {
 	// buyer: "http://121.43.34.227:8888",
 	// seller: "http://121.43.34.227:8889",
 	
-	common: "https://common-api.hznush.com",
-	buyer: "https://buyer-api.hznush.com",
+	// common: "https://common-api.hznush.com",
+	// buyer: "https://buyer-api.hznush.com",
 	// seller: "https://seller-api.hznush.com",
 	// manager: "https://admin-api.hznush.com",
 	// im: "https://im-api.hznush.com",
@@ -23,8 +23,8 @@ const dev = {
 // 生产环境
 const prod = {
 	// im: "http://127.0.0.1:8885",
-	// common: "http://127.0.0.1:8890",
-	// buyer: "http://127.0.0.1:8888",
+	common: "http://127.0.0.1:8890",
+	buyer: "http://127.0.0.1:8888",
 	// seller: "http://127.0.0.1:8889",
 	// manager: "http://127.0.0.1:8887",
 	
@@ -34,8 +34,8 @@ const prod = {
 	// seller: "http://121.43.34.227:8889",
 	// manager: "http://121.43.34.227:8887",
 	
-	common: "https://common-api.hznush.com",
-	buyer: "https://buyer-api.hznush.com",
+	// common: "https://common-api.hznush.com",
+	// buyer: "https://buyer-api.hznush.com",
 	// seller: "https://seller-api.hznush.com",
 	// manager: "https://admin-api.hznush.com",
 	// im: "https://im-api.hznush.com",

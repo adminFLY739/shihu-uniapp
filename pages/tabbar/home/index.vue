@@ -284,6 +284,7 @@
 				} else {
 					this.flowList = this.flowList.concat(list.filter(item => item.media.length !== 0))
 				}
+        console.log("flowList", this.flowList);
 				uni.hideLoading();
 			},
 
