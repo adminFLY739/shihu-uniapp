@@ -335,12 +335,16 @@
 		},	
 		
 		// 下拉刷新
-		// onPullDownRefresh() {
-		// 	this.pageNumber = 1;
-		// 	this.discussList = [];
-		// 	this.getFollowDiscuss();
-		// 	uni.stopPullDownRefresh();
-		// },
+		onPullDownRefresh() {
+      this.pageNumber1 = 1;
+      this.pageNumber2 = 1;
+      this.discussList = [];
+      this.followUserList = [];
+      this.loadData();
+      this.allMessageNoReadCount();
+			uni.stopPullDownRefresh();
+      console.log("111");
+		},
 		
 	}
 </script>

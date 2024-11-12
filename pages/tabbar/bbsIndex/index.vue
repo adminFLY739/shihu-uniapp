@@ -164,6 +164,7 @@
 				this.getLastPost();
 			}
 			uni.stopPullDownRefresh();
+      console.log("111");
 		},
 		methods: {
 

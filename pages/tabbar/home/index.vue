@@ -227,14 +227,17 @@
 			},
 			// 下拉刷新被触发
 			refresherrefreshFun() {
-				this.pageNumber1 = 1;
-				this.pageNumber2 = 1;
 				this.loadData();
+        this.allMessageNoReadCount();
 			},
 			//获取数据
 			async loadData() {
-				this.getLastPost();
-				this.getLastDiscuss();
+        this.pageNumber1 = 1;
+        this.flowList = [];
+        await this.getLastPost();
+        this.pageNumber2 = 1;
+        this.discussList = [];
+        await this.getLastDiscuss();
 			},
 
 			// 加载新分页
@@ -432,8 +435,10 @@
 
 		//下拉刷新
 		onPullDownRefresh() {
-			uni.stopPullDownRefresh();
-			this.refresherrefreshFun();
+			// this.refresherrefreshFun();
+      this.cut_index(0);
+      uni.stopPullDownRefresh();
+      console.log("111");
 		},
 		components: {
 			tpl

@@ -108,6 +108,7 @@
 		},
 		onPullDownRefresh() {
 			this.userInfo = this.$options.filters.isLogin();
+      uni.stopPullDownRefresh();
 		},
 		// #ifndef MP
 		onNavigationBarButtonTap(e) {
