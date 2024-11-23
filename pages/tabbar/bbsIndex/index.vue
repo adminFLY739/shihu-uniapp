@@ -131,6 +131,16 @@
 			this.userInfo = storage.getUserInfo()
 			//解决发布帖子返回后页面不更新的问题
 			// this.getLastPost();
+      if (this.current === 0) {
+        this.page1 = 1;
+        this.followUserPost = [];
+        this.getFollowUserPost();
+      }
+      if (this.current === 1) {
+        this.page2 = 1;
+        this.lastPost = [];
+        this.getLastPost();
+      }
 			this.allMessageNoReadCount();
 		},
 		onLoad() {
